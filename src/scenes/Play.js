@@ -52,17 +52,17 @@ class Play extends Phaser.Scene {
         if(this.checkCollision(this.p1Rocket, this.ship03)) {
             console.log('kaboom ship 03');
             this.p1Rocket.reset();
-            this.ship03.reset();
+            this.shipExplode(this.ship03); 
         }
         if (this.checkCollision(this.p1Rocket, this.ship02)) {
             console.log('kaboom ship 02');
             this.p1Rocket.reset();
-            this.ship02.reset();
+            this.shipExplode(this.ship02); 
         }
         if (this.checkCollision(this.p1Rocket, this.ship01)) {
             console.log('kaboom ship 01');
             this.p1Rocket.reset();
-            this.ship01.reset();
+            this.shipExplode(this.ship01); 
         }
 
     }
@@ -92,5 +92,5 @@ class Play extends Phaser.Scene {
         });       
     }
 
-    
+
 }
